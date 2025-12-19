@@ -1,22 +1,82 @@
-# Politique de Confidentialité - GRO-Tom Extension
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de Confidentialité - GRO-Tom Extension</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #34495e;
+      margin-top: 30px;
+    }
+    .last-updated {
+      color: #7f8c8d;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Politique de Confidentialité - GRO-Tom Extension</h1>
+  <p class="last-updated">Dernière mise à jour : <span id="date"></span></p>
 
-## Collecte de données
+  <h2>1. Collecte de données</h2>
+  <p>Cette extension collecte uniquement :</p>
+  <ul>
+    <li><strong>Préférences utilisateur</strong> : Les paramètres d'activation/désactivation des modules sont stockés localement via <code>chrome.storage.sync</code> pour synchroniser vos préférences entre vos appareils.</li>
+    <li><strong>IDs techniques en cache</strong> : Les identifiants techniques des colonnes Monday.com sont mis en cache localement (<code>localStorage</code>) pour améliorer les performances de recherche. Ces données sont stockées uniquement sur votre appareil.</li>
+  </ul>
 
-Cette extension collecte uniquement :
-- Les préférences utilisateur (modules activés/désactivés) via chrome.storage.sync
-- Les IDs techniques des colonnes Monday.com en cache local (localStorage) pour améliorer les performances de recherche
+  <h2>2. Utilisation des données</h2>
+  <ul>
+    <li>Les données sont stockées <strong>uniquement localement</strong> sur votre appareil</li>
+    <li><strong>Aucune donnée n'est transmise</strong> à des serveurs externes</li>
+    <li><strong>Aucune donnée personnelle</strong> n'est collectée (nom, email, contenu des pages, etc.)</li>
+    <li>Les IDs techniques sont utilisés uniquement pour l'affichage dans l'interface et la fonctionnalité de recherche de l'extension</li>
+    <li>L'extension lit le contenu des pages Monday.com et Zapier.com <strong>uniquement pour extraire les identifiants techniques</strong> nécessaires à son fonctionnement</li>
+  </ul>
 
-## Utilisation des données
+  <h2>3. Partage de données</h2>
+  <p><strong>Aucune donnée n'est vendue, partagée ou transmise à des tiers.</strong></p>
+  <p>L'extension fonctionne entièrement en local et ne communique avec aucun serveur externe.</p>
 
-- Les données sont stockées localement sur votre appareil
-- Aucune donnée n'est transmise à des serveurs externes
-- Aucune donnée personnelle n'est collectée
-- Les IDs techniques sont utilisés uniquement pour l'affichage et la recherche dans l'extension
+  <h2>4. Stockage des données</h2>
+  <p>Toutes les données sont stockées localement sur votre appareil via :</p>
+  <ul>
+    <li><code>chrome.storage.sync</code> : Pour les préférences utilisateur (synchronisées entre vos appareils Chrome connectés au même compte)</li>
+    <li><code>localStorage</code> : Pour le cache des IDs de colonnes (stockage local uniquement)</li>
+  </ul>
+  <p>Vous pouvez supprimer toutes ces données à tout moment en désinstallant l'extension ou en utilisant la fonction "Clear" dans l'outil de recherche de colonnes.</p>
 
-## Partage de données
+  <h2>5. Permissions</h2>
+  <p>L'extension demande les permissions suivantes :</p>
+  <ul>
+    <li><strong>storage</strong> : Pour sauvegarder vos préférences et mettre en cache les IDs de colonnes</li>
+    <li><strong>Accès aux domaines</strong> : Accès à <code>*.monday.com</code> et <code>*.zapier.com</code> pour injecter les scripts nécessaires à l'affichage des IDs techniques</li>
+  </ul>
 
-Aucune donnée n'est vendue, partagée ou transmise à des tiers.
+  <h2>6. Contact</h2>
+  <p>Pour toute question concernant cette politique de confidentialité, veuillez contacter le développeur via le dépôt GitHub de l'extension.</p>
 
-## Contact
-
-webxtl@hotmail.com
+  <script>
+    document.getElementById('date').textContent = new Date().toLocaleDateString('fr-FR', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  </script>
+</body>
+</html>

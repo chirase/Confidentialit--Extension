@@ -1,0 +1,22 @@
+# Politique de Confidentialité - GRO-Tom Extension
+
+## Collecte de données
+
+Cette extension collecte uniquement :
+- Les préférences utilisateur (modules activés/désactivés) via chrome.storage.sync
+- Les IDs techniques des colonnes Monday.com en cache local (localStorage) pour améliorer les performances de recherche
+
+## Utilisation des données
+
+- Les données sont stockées localement sur votre appareil
+- Aucune donnée n'est transmise à des serveurs externes
+- Aucune donnée personnelle n'est collectée
+- Les IDs techniques sont utilisés uniquement pour l'affichage et la recherche dans l'extension
+
+## Partage de données
+
+Aucune donnée n'est vendue, partagée ou transmise à des tiers.
+
+## Contact
+
+webxtl@hotmail.com
